@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol AVL Interactivo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-tree"></i> Árbol AVL Interactivo</h1>
+    </header>
+    <main>
+        <div class="controls">
+            <div class="input-group">
+                <input type="number" id="valorInsertar" placeholder="Valor a insertar" max="1000">
+                <button onclick="insertar()"><i class="fas fa-plus"></i> Insertar</button>
+            </div>
+            <div class="input-group">
+                <input type="number" id="valorEliminar" placeholder="Valor a eliminar" max="1000">
+                <button onclick="eliminar()"><i class="fas fa-minus"></i> Eliminar</button>
+            </div>
+            <div class="input-group">
+                <input type="number" id="valorBuscar" placeholder="Valor a buscar" max="1000">
+                <button onclick="buscar()"><i class="fas fa-search"></i> Buscar</button>
+            </div>
+            <button onclick="limpiarArbol()"><i class="fas fa-trash"></i> Limpiar Árbol</button>
+        </div>
+        <div class="tree-container">
+            <canvas id="canvas" width="700" height="500"></canvas>
+            <div id="log-container" class="log-container"></div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
